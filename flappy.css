@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('fontes/Oswald-Regular.ttf') format('truetype');
+    font-family: 'Pixel';
+    src: url("fontes/Pixel.ttf");
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+
+html[dark] {
+    background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+
+}
+
+html[dark] .conteudo h1 {
+    color: white;
+}
+
+html[dark] .configuracao {
+    background-color: black;
+    border: 3px solid blue;
+    color: white;
+}
+
+html[dark] .conteudo [wm-flappy] {
+    background-color: black;
+    border: 5px solid blue;
+    color: white;
+}
+
+html[dark] .barreira .borda {
+    background: linear-gradient(90deg, #ffffff, #515250);
+
+}
+
+html[dark] .barreira .corpo {
+    background: linear-gradient(90deg, #515250, black);
+
+}
+
+html{
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 100%;
+}
+
+[wm-flappy] {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    border: 5px solid dodgerblue;
+    height: 530px;
+    width: 800px;
+    margin: 15px;
+    background-color: deepskyblue;
+    overflow: hidden;
+}
+
+
+.configuracao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    margin: 15px;
+    max-width: 420px;
+    border: 3px solid blue;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    gap: 1rem;
+    padding: 1.125rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.configuracao>h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.125rem;
+}
+
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formulario span {
+    font-size: 16px;
+    flex: 1;
+}
+
+.formulario .selects {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex: 1.5;
+}
+
+.formulario input[type="radio"] {
+    appearance: none;
+    background-color: black;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1rem;
+    height: 1rem;
+    border: 0.15em solid black;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.formulario input[type="radio"]:checked {
+    background-color: white;
+}
+
+.formulario input[type="text"] {
+    box-sizing: border-box;
+    color: gray;
+    flex: 1.5;
+    background-color:white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.formulario input[type="text"]:focus {
+    outline: none;
+    background-color: white;
+}
+
+.formulario input[type="submit"] {
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    height: 40px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+}
